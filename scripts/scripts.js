@@ -53,7 +53,7 @@ var App = {
 		// Green Screen
 
 		else if (effect === 'greenscreen') {
-				
+				$(".colours").show();
 					/* Selectors */
 					var rmin = $('#red input.min').val();
 					var gmin = $('#green input.min').val();
@@ -95,6 +95,7 @@ var App = {
 	},
 
 	start : function(effect) {
+		$(".colours").hide();
 		if(App.playing) { clearInterval(App.playing); }
 		App.playing = setInterval(function() {
 			App.drawToCanvas(effect);
