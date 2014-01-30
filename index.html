@@ -1,1 +1,52 @@
-My GitHub Page
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HTML5 Face Detection</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h2>Javascript Face detection</h2>
+<div style="float:left; width:59%;">
+<div class="wrapper">
+	<!-- Our Main Video Element -->
+	<video height="426" width="640" controls autoplay style="width:99px; height:75px; display:none;"></video>
+	
+	<a href="javascript:" class="btn" onclick="App.start('glasses');">Glasses!</a>
+	<a href="javascript:" class="btn" onclick="App.start('hipster');">Hipster!</a>
+	<br /><br /><br />
+	<!-- Out Canvas Element for output -->
+	<canvas id="output"  height="426" width="515" ></canvas>
+
+	<div class="colours" style="display:none;">
+		<div id="red">
+			<input type="range" min=0 max=255 value=190 class="min">
+			<input type="range" min=0 max=255 value=240 class="max">
+		</div>
+		<div id="green">
+			<input type="range" min=0 max=255 value=0 class="min">
+			<input type="range" min=0 max=255 value=120 class="max">
+		</div>
+		<div id="blue">
+			<input type="range" min=0 max=255 value=90 class="min">
+			<input type="range" min=0 max=255 value=190 class="max">
+		</div>				
+	</div>
+	
+</div>
+</div>
+<div style="float:left; width:39%; margin-top:36px;">
+<h3>Step 1</h3>: If you see an alert like <i>'Sorry, your browser does not support getUserMedia'</i>, then use any of the browsers listed <a target="_blank" href="http://caniuse.com/#feat=stream">Here</a>
+<br/><br/>
+<h3>Step 2</h3>: Allow or deny using you web cam <i>(If you dont have one.. then look for one ;))</i>
+<br/><br/>
+<h3>Step 3</h3>: Click on either the <i>Glasses</i> or <i>Hipster</i> buttons to begin the magic!
+<br/><br/>
+</div>
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/ccv.js"></script>
+<script type="text/javascript" src="scripts/face.js"></script>
+<script type="text/javascript" src="scripts/scripts.js"></script>
+<script type="text/javascript" src="scripts/stackblur.js"></script>
+</body>
+</html>
